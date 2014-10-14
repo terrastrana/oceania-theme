@@ -1,0 +1,518 @@
+<! DOCTYPE html> 
+
+<head>
+
+<meta name="color:Background Color" content="#fff" />
+<meta name="color:Header Color" content="#000"/>
+<meta name="font:Body" content="News Gothic" />
+<meta name="image:Background Image" content="http://static.tumblr.com/6db8rov/RwNndg6tq/swirl_pattern.png" />
+<meta name="image:Header Image" content=" " />
+
+
+<title>
+{Title}{block:PostSummary}, {PostSummary} {/block:PostSummary} 
+</title>
+
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+
+<link rel="shortcut icon" href="{Favicon}" />
+
+<meta name="color:Content" content="#fff" />
+<meta name="color:Sidebar Title" content="#000" />
+<meta name="color:Sidebar Link" content="#646664" />
+<meta name="color:Sidebar Hover" content="E8AE0C" />
+
+<meta name="color:Primary Colour" content="#000" />
+<meta name="color:Secondary Colour" content="#646664" />
+<meta name="image:Sidebar" content="" />
+
+<meta name="font:Main" content="Quadrat" />
+<meta name="font:Sidebar Title" content="Quadrat" />
+<meta name="font:Sidebar Text" content="News Gothic" />
+<meta name="font:Secondary" content="News Gothic" />
+
+<meta name="text:Facebook Username" content="http://www.facebook.com/"/>
+<meta name="text:Instagram Username" content="http://www.instagram.com/"/>
+<meta name="text:Twitter Username" content="http://www.twitter.com/"/>
+
+<meta name="if:Infinite Scroll" content="0">
+
+        
+<style type="text/css">
+
+/* CSS for Everything Else */
+
+a {
+    text-decoration:none;
+}
+
+.aboutsummary {
+    font-weight:bold;
+    font-family:{font:Main};
+}
+
+#audial {
+      width:460px;
+      background-color:#fff;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      padding:20px 0;
+      margin-left:5%;
+      font-family: {font:Main};
+      background-attachment: fixed;
+      background-repeat:repeat;
+      background-color:{color:Background Color};
+      background-image: url({image:Background Image});
+}
+
+.auditory {
+    margin-left:10%;
+    font-family: {font:Main};
+    font-size:20px;
+}
+
+.audiotitle {
+    margin-left:10%;
+    font-weight:bold;
+    font-family: {font:Main};
+}
+
+        
+body {
+      background-color: {color:Background};
+      font-family: {font:Body};
+      background-image: url({image:Background Image});
+      margin: 0;
+      word-wrap: break-word;
+      background-attachment: fixed;
+}
+    
+.big {
+    
+    font-weight:bold;
+    font-size:20px;
+    font-family: {font:Main};
+}
+
+#content {
+      width: 560px;
+      margin: 60px 0 60px 460px;
+      padding: 20px 0;
+      color: #000;
+      position: absolute;
+}
+
+#content a {
+      color: {color:Primary Colour};
+      text-decoration: none;
+}
+
+#content a:hover {
+      color: {color:Secondary Colour};
+}
+
+#content blockquote {
+      border-left: solid 2px black;
+      margin: 0;
+      padding-left: 10px;
+}
+
+#content #notecontainer {
+      margin: 20px auto;
+      width: 500px;
+      font-size: 11px;
+}
+
+#content #notecontainer img.avatar {
+      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+}
+
+#content #notecontainer ol.notes {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+}
+
+#content #posts {
+      background-color:{color:Content};
+      width: 500px;
+      margin: 0 auto 20px;
+      padding:50px;
+}
+
+#content #posts #notesandco .permalink {
+    font-family: {font:Main};
+    font-size:18px;
+}
+
+#content #posts .permalink {
+      font-size:9px;
+      margin-top:10px;
+}
+
+#content #posts #tags {
+      font-size:9px;
+}
+
+#content #posts .text {
+      font-size: 18px;
+}
+
+#content #posts .title {
+      font-size:11px;
+}
+
+.descripto {
+    font-family: {font:Main};
+    font-size: 12px;
+}
+
+/* Footer */
+            #footer {
+                font-family: {font:Main};
+                color:{color:Primary Colour};
+                margin:           20px 0px 0px 0px;
+                text-align:       center;
+                font-size:        14px;
+            }
+            
+            #footer a {
+                text-decoration:  underline;
+                color:            #000000;
+            }
+            
+            #footer a:hover {
+                text-decoration:  underline;
+            }
+
+            #footer p.tiny {
+                margin:           50px 0px 0px 0px;
+                font-size:        16px;
+            }
+            
+            #footer p.tiny a {
+                text-decoration:  underline;
+                color:            #000000;
+            }
+            
+            #footer p.tiny .dim {
+                filter: alpha(opacity=50); 
+                -moz-opacity: 0.5; 
+                opacity: 0.5;
+            }
+            
+#header {
+      width: 560px;
+      height: auto;
+      text-align:center;
+      position: relative;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:5%;
+}
+
+
+hr.style-six {
+    border:0;
+    height:0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin-top:8%;
+}
+ 
+
+img {
+      border: 0;
+      max-width: 100%;
+}
+
+.item { 
+      width: 100%;
+      height: 100%;
+}
+
+.item.w2 { 
+      width: 50%; 
+}
+
+
+.phototitle {
+    margin-left:10%;
+    font-weight:bold;
+    font-family: {font:Main};
+}
+
+#quoted {
+    width:460px;
+    background-color:#fff;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    padding:20px 0;
+    margin-left:5%;
+    font-family: {font:Main};
+    background-attachment: fixed;
+    background-repeat:repeat;
+}
+
+.quotetext {
+    margin-left:10%;
+    font-size:18px;
+    font-family: {font:Main};
+}
+
+.quotetitle {
+    margin-left:10%;
+    font-weight:bold;
+    font-family: {font:Main};
+}
+
+#sidebar {
+      position: absolute;
+      top: 210px;
+      left: 60px;
+}
+
+#sidebar a {
+    color: {color:Secondary Colour};
+}
+
+#sidebar a:hover {
+      color: #e8ae0c;
+}
+
+#sidebar .description {
+      color: #000;
+      font-size: 11px;
+      padding:10px;
+      text-align:justify;
+      line-height:100%;
+      margin-left:10%;
+}
+
+#sidebar .image {
+      width: 200px;
+      height: auto;
+      text-align:center;
+}
+
+#sidebar .pagination {
+      width: 260px;
+      text-align: center;
+      padding: 3px 0;
+}
+
+#sidebar .pagination a {
+      color: {color:Primary Colour};
+      text-decoration: none;
+}
+
+#sidebar .pagination a:hover {
+      color: {color:Secondary Colour};
+}
+
+#sidebar .title {
+      font-family: {font:Main};
+      font-size: 30px;
+      text-align: center;
+      padding:10px;
+}
+
+#sidebar .title a {
+      color: {color:Primary Colour};
+      text-decoration: none;
+}
+
+#sidebar .title a:hover {
+      color: #e8ae0c;
+}
+
+
+.tagged {
+    font-family: {font:Main};
+}
+
+.text {
+    margin-left:10%;
+    font-family: {font:Body};
+}
+
+.title {
+    color: {color:Header Color};
+}
+
+#title {
+    font-family: {font:Main};
+    font-size:28px;
+}
+
+#wrap {
+     width: 1500px;
+     margin: auto;
+     position: relative;
+}
+        
+</style>
+
+        
+{block:IfInfiniteScroll}
+<script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code"></script>
+{/block:IfInfiniteScroll}
+
+
+    </head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+ 
+    <img src="{image:Header Image}"/>
+   
+    </div><!-- closes header div -->
+
+<div id="sidebar">
+    
+    <div class="title">
+    
+    
+   
+    <h1>{Title}</h1>
+   
+    
+            
+                <a href="{text:Facebook Username}" target="_blank"><img src="http://static.tumblr.com/6db8rov/0m5ndfz44/facebook-96.png"></a> 
+                <a href="{text:Instagram Username}"><img src="http://static.tumblr.com/6db8rov/uhAndfz1u/instagram-96.png"></a> 
+                <a href="{text:Twitter Username}" target="_blank"><img src="http://static.tumblr.com/6db8rov/4V4ndfyun/twitter-96.png"></a> 
+           
+    
+            <div class="descripto">
+             {Description}
+            </div><!-- closes descripto div -->
+    
+    </div><!-- closes title div -->
+        
+     
+        
+
+        
+         
+    
+</div><!-- closes sidebar div -->
+
+
+        <div id="content">
+
+            <div class="auto_pagerize_element">
+            
+{block:Posts}<!-- where all the magic happens -->
+                <div id="posts">
+                
+{block:Photo}
+{LinkOpenTag}<img src="{PhotoURL-500}" />{LinkCloseTag}
+{block:Caption}<div class="text"><span class="phototitle">{Caption}</span>
+</div>{/block:Caption}
+{/block:Photo}
+
+{block:Photoset}
+{Photoset-500}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:Photoset}
+
+{block:Video}
+{Video-500}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:Video}
+
+{block:Audio}
+<div id="audial">
+<div class="auditory">{AudioPlayer}
+{PlayCountWithLabel}</div>
+{block:Caption}
+<div class="text"><span class="audiotitle">{Caption}</span></div>{/block:Caption}
+</div><!-- closes audial div -->
+{/block:Audio}
+
+{block:Quote}
+<div id="quoted">
+<div class="quotetext">{Quote}
+</div>
+{block:Source}
+<div class="quotetitle"><br />{Source}
+</div>
+{/block:Source}
+
+</div><!-- closes quoted div -->
+{/block:Quote}
+
+{block:Text}
+{block:Title}<div class="title"><span class="big">{Title}</span></div>
+{/block:Title}
+<div class="text">{Body}</div>
+{/block:Text}
+
+{block:Answer}
+<div class="title">{Question}</div>
+<div class="text">{AskerPortraitURL-64}{Asker}</div>
+<div class="text">{Answer}</div>
+{/block:Answer}
+
+{block:Chat}
+{block:Title}<div class="title">{Title}</div>{/block:Title}
+<div class="text">
+{block:Lines}
+{block:Label}<strong>{Label}</strong>{/block:Label} {Line}<br  />
+{/block:Lines}</div>
+{/block:Chat}
+
+{block:Link}<div class="title"><span class="big">
+<a href="{URL}" >{Name}</a></span></div>
+{block:Description}<div class="text">{Description}</div>
+{/block:Description}
+{/block:Link}
+
+<hr class="style-six">
+
+<div id="notesandco">
+
+<div id="permalink"><span class="permalink">
+<a href="{Permalink}">
+{block:Date}{lang:Posted TimeAgo}{/block:Date}
+{block:NoteCount} with {NoteCountWithLabel}{/block:NoteCount}
+</a></span>
+</div><!-- closes permalink -->
+
+<div id="tags">
+<span class="tagged">
+{block:Tags}
+<a href="{TagURL}"><span class="bullet">-</span> {Tag}</a>
+{/block:Tags}
+</span>
+</div><!-- closes tags -->
+
+{block:PostNotes}
+<div id="notecontainer">{PostNotes}
+</div><!-- closes postnotes -->
+{/block:PostNotes}
+
+</div><!-- closes notesandco -->
+                </div><!-- closes posts div -->
+{/block:Posts}
+            
+        
+            <div id="footer">
+        theme: <a href="https://github.com/terrastrana">mysterioso</a> by <a href="http://www.twitter.com/terrastrana">terrastrana</a>
+            </div><!-- closes footer div -->
+        
+            </div><!-- closes auto_pagerize div -->
+    
+        </div><!-- closes content div -->
+    
+</div><!-- closes wrap div -->
+    
+    
+</body>
+</html>
