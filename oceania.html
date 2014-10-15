@@ -2,12 +2,6 @@
 
 <head>
 
-<meta name="color:Background Color" content="#fff" />
-<meta name="font:Content Font" content="News Gothic" />
-<meta name="image:Background Image" content="http://static.tumblr.com/6db8rov/RwNndg6tq/swirl_pattern.png" />
-<meta name="image:Header Image" content=" " />
-
-
 <title>
 {Title}{block:PostSummary}, {PostSummary} {/block:PostSummary} 
 </title>
@@ -17,22 +11,28 @@
 {/block:Description}
 
 <link rel="shortcut icon" href="{Favicon}" />
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+{block:Hidden}
+<meta name="image:Background Image" content="http://static.tumblr.com/6db8rov/RwNndg6tq/swirl_pattern.png" />
+<meta name="image:Header Image" content=" " />
 
 <meta name="font:Title Font" content="Quadrat" />
+<meta name="font:Content Font" content="News Gothic" />
 
 <meta name="text:Facebook Username" content="http://www.facebook.com/"/>
 <meta name="text:Instagram Username" content="http://www.instagram.com/"/>
 <meta name="text:Twitter Username" content="http://www.twitter.com/"/>
 
+<meta name="color:Background Color" content="#fff" />
 <meta name="color:Content" content="#fff" />
 <meta name="color:Main Font Color" content="#000" />
 <meta name="color:Link Color" content="#000" />
 <meta name="color:Link Hover Color" content="#646664" />
 
 <meta name="if:Show Header Image" content="0"/>
-
 <meta name="if:Infinite Scroll" content="0">
-
+{/block:Hidden}
         
 <style type="text/css">
 
@@ -354,7 +354,10 @@ img {
      margin: auto;
      position: relative;
 }
-        
+     
+/* Custom CSS */
+{CustomCSS}
+	 
 </style>
 
         
@@ -425,7 +428,7 @@ img {
                 <div id="posts">
                 
 {block:Photo}
-{LinkOpenTag}<img src="{PhotoURL-500}" />{LinkCloseTag}
+{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
 {block:Caption}<div class="text"><span class="phototitle">{Caption}</span>
 </div>{/block:Caption}
 {/block:Photo}
