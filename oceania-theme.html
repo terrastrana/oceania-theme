@@ -29,12 +29,14 @@
 <meta name="color:Link Color" content="#000" />
 <meta name="color:Link Hover Color" content="#646664" />
 
+<meta name="if:Show Header Image" content="0"/>
+
 <meta name="if:Infinite Scroll" content="0">
 
         
 <style type="text/css">
 
-/* CSS for Everything Else */
+/* CSS for Oceania Theme */
 
 a {
     text-decoration:none;
@@ -367,10 +369,17 @@ img {
 <div id="wrap">
 
 <div id="header">
- 
-    <img src="{image:Header Image}"/>
-   
-    </div><!-- closes header div -->
+
+{block:IfShowHeaderImage}
+<img src="{image:Header Image}"/>
+{/block:IfShowHeaderImage}
+
+{block:IfNotShowHeaderImage}
+<h1>{Title}</h1>
+{/block:IfNotShowHeaderImage}
+
+    
+</div><!-- closes header div -->
 
 <div id="sidebar">
     
