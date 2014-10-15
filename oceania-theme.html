@@ -194,15 +194,7 @@ body {
 #footer .pagination a:hover {
       color: {color:Link Hover Color};
 }
-  
-#footer-pagination {
-     position: absolute;
-     top: 0px;
-     right: 0px;
-     font-family: {font:Title Font};
-     
-}  
-            
+
 #header {
       width: 560px;
       height: auto;
@@ -237,6 +229,15 @@ img {
       width: 50%; 
 }
 
+#next {
+     position: absolute;
+     bottom: 40px;
+     right: -80px;
+     font-family: {font:Title Font};
+     font-size: 48px;
+}
+    
+
 .notsobig {
     
     font-weight:bold;
@@ -248,6 +249,14 @@ img {
     margin-left:10%;
     font-weight:bold;
     font-family: {font:Title Font};
+}
+
+#previous {
+     position: absolute;
+     bottom: 40px;
+     left: -35px;
+     font-family: {font:Title Font};
+     font-size: 48px;
 }
 
 #quoted {
@@ -507,25 +516,24 @@ img {
         
             </div><!-- closes auto_pagerize div -->
             
-                            <div id="footer-pagination"        
+                            <div id="footer-pagination">    
 {block:IfNotInfiniteScroll}
 {block:Pagination}
 
 <div id="pagination">
+
+    <div id="previous">
 {block:PreviousPage}
 <a href="{PreviousPage}">&#171; </a>
 {/block:PreviousPage}
-{block:JumpPagination length="5"}
-{block:CurrentPage}
-<span class="current_page">{PageNumber}</span>
-{/block:CurrentPage}
-{block:JumpPage}
-<a class="jump_page" href="{URL}">{PageNumber}</a>
-{/block:JumpPage}
-{/block:JumpPagination}
+    </div><!-- closes previous div -->
+    
+    <div id="next">
 {block:NextPage}
 <a href="{NextPage}"> &#187;</a>
 {/block:NextPage}
+    </div><!-- closes next div -->
+    
 </div><!-- closes pagination div -->
 
 {/block:Pagination}
