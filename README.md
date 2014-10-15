@@ -4,7 +4,7 @@ A working example of the theme can be found at: http://oceania-theme.tumblr.com.
 
 Notes for customizing the theme:
 
-As you can see from the screenshots, there is an option to upload a header image. The ideal size for the header image is 560x378 pixels. 
+As you can see from the screenshots, there is an option to upload a header image. The suggested maximum size for the header image is 560x378 pixels. 
 
 There is an option to add your usernames from Facebook, Instagram and Twitter. I've included the social media icons for these three websites (facebook-96.png, instagram-96.png, and twitter-96.png). They will needed to be uploaded as Theme Assets in the Customize section.
 
